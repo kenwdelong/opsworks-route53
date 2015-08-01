@@ -46,10 +46,11 @@ The purpose of this cookbook is to automatically update route53 DNS zone records
     ]
 }
 ```
-- Include this recipe as part of the `configure` lifecycle event.  You will need to reference this recipe in your Berksfile:
+- Reference this recipe in your Berksfile in the stacks where you will use it:
 ```text
 cookbook 'opsworks-route53', git: 'git://github.com/tomalessi/opsworks-route53.git'
 ```
+- Include this recipe as part of the `configure` lifecycle event.
 
 
 ## License and Authors
