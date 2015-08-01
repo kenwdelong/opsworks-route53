@@ -6,7 +6,7 @@ The purpose of this cookbook is to automatically update route53 DNS zone records
 ## Assumptions
 
 - This cookbook is meant to work within an AWS OpsWorks environment.  Your mileage may vary in other environments.
-- Route53 is being used to manage DNS
+- Route53 is being used to manage DNS within a VPC
 
 
 ## Requirements
@@ -18,14 +18,16 @@ The purpose of this cookbook is to automatically update route53 DNS zone records
 
 ## Usage
 
+- Enable `Enable DNS Resolution` and `Enable DNS Hostnames` on the VPC where OpsWorks is managing instances.
+- Create a DHCP Options Set that includes `domain-name=domain.com` and `domain-name-servers=AmazonProvidedDNS`.  Substitute your domain name for domain.com. 
 - Setup the following custom JSON in the relevant OpsWorks stack(s):
 ```json
 {  
   "private_settings": {
     "dns": {
       "zone_id": "<enter zone id>",
-      "domain": "<enter domain (e.g. domain.com)>",
-      "ttl": <enter ttl>
+      "domain": "<enter domain-name>",
+      "ttl": 300
     }
   }
 ```
