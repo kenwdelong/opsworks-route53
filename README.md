@@ -30,6 +30,7 @@ The purpose of this cookbook is to automatically update route53 DNS zone records
       "ttl": 300
     }
   }
+}
 ```
 - Include the following policy in the OpsWorks stack instance profile so that OpsWorks provisioned instances can manage their DNS records:
 ```json
