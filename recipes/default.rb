@@ -26,9 +26,9 @@ r53_options = {
     :action => "UPSERT",
     :resource_record_set => {
       :type => "A",
-      :resource_records => [{ 
+      :resource_records => [
         :value => node[:opsworks][:instance][:private_ip]
-      }],
+      ],
       :name => node[:opsworks][:instance][:hostname] + '.' + node[:private_settings][:dns][:domain],
       :ttl => node[:private_settings][:dns][:ttl]
     }
