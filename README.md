@@ -23,7 +23,6 @@ The purpose of this cookbook is to automatically update route53 DNS zone records
 ```json
 {  
   "private_settings": {
-    "region": "us-west-2",
     "dns": {
       "zone_id": "<enter zone id>",
       "domain": "<enter domain-name>",
