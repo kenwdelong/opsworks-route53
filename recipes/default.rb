@@ -2,7 +2,7 @@
 # Cookbook Name:: opsworks-route53
 # Recipe:: default
 #
-# Copyright 2015, Tom Alessi
+# Copyright 2017, Tom Alessi
 #
 # All rights reserved - Do Not Redistribute
 #

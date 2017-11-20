@@ -6,3 +6,7 @@ This file is used to list changes made in each version of the sd-route53 cookboo
 0.1.0
 -----
 - [Tom Alessi] - Initial release of opsworks-route53
+
+0.2.0
+-----
+- [Tom Alessi] - Updating to Chef 12
