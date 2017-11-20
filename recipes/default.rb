@@ -12,7 +12,12 @@
 
 require 'aws-sdk'
 
-r53 = AWS::Route53.new
+# Instantiate the s3 client
+r53 = Aws::Route53::Client.new(
+  region: node[:private_settings][:region],
+  credentials: Aws::InstanceProfileCredentials.new()
+)
+
 
 # Set the options
 # UPSERT = create if it does not exist, update if it does

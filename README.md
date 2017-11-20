@@ -11,9 +11,8 @@ The purpose of this cookbook is to automatically update route53 DNS zone records
 
 ## Requirements
 
-- Amazon Linux (tested on 2015.03)
-- Chef (tested on 11.10)
-- Berkshelf (tested on 3.2.0)
+- Amazon Linux (tested on 2017.09)
+- Chef (tested on 12)
 
 
 ## Usage
@@ -24,6 +23,7 @@ The purpose of this cookbook is to automatically update route53 DNS zone records
 ```json
 {  
   "private_settings": {
+    "region": "us-west-2",
     "dns": {
       "zone_id": "<enter zone id>",
       "domain": "<enter domain-name>",
